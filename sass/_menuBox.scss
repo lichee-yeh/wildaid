@@ -1,0 +1,36 @@
+.menuBox {
+    @extend %all-100;
+    background: $blue;
+    z-index: 4;
+    @extend %flex-mid;
+    li {
+        margin: 30px 0;
+    }
+    a {
+        font-size: 2rem;
+        color: white;
+        letter-spacing: 1px;
+    }
+    .icon-video {
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .active {
+        @extend %fw_b;
+        position: relative;
+        z-index: 1;
+        &:after {
+            content: "";
+            width: 104%;
+            height: 9px;
+            position: absolute;
+            bottom: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: $l-blue;
+            transition: all .3s ease;
+            margin-left: -2%;
+            z-index: -1;
+        }
+    }
+}

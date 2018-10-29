@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http - equiv="x-ua-compatible" content="ie=edge">
+    <title>WildAid－無翅聯盟</title>
+    <!-- facebook share-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon-->
+    <link rel="icon" href="img/favicon.ico">
+    <!-- css style-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--if gt IE 9-->
+    <script src="js/vendor/html5shiv.js"></script>
+    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/vendor/jquery.plate.js"></script>
+  </head>
+  <body>
+    <div class="privacy" style="display:none">
+      <div class="content"><a class="closeBtn" href="#">
+          <div class="inner"><span></span><span></span></div></a>
+        <h2>隱私政策</h2>
+        <h3>Privacy Policy</h3>
+        <ul>
+          <li>WildAid野生救援是本網站的所有者，WildAid野生救援有權隨時更改、修訂或收回本網站的內容，還有權隨時更改或收回用戶或其他訪問者訪問本網站的權利。</li>
+          <li>我們在事先通知或不通知的情況下，將通過更新本頁內容來隨時更改本網站的“隱私政策”，請定時查看本頁面了解更新內容。您對附帶了更新內容的本網站繼續進行訪問或使用，即表示您同意該更新內容。</li>
+          <li>本網站不收集任何用戶或其他訪問者的個人訊息。</li>
+          <li>本網站所使用的全部圖像及影片文件的版權均歸WildAid野生救援所有，未經授權任何公司或個人不可下載或轉載本網站內容用做任何商業用途。如有任何相關版權問題，請與WildAid野生救援聯繫。</li>
+          <li>本網站載有本網站服務以外的其他網站的連結，本網站載有的一切第三方網站連結僅僅作為向您提供的方便連結。但是對於第三方網站上的全部內容或者其他資料、該網站的使用，以及通過該網站做廣告或銷售的任何產品和服務等相關事實，我們均從未以任何方式簽署或同意承擔任何相關的法律責任。在任何情況下，我們對因訪問或使用本網站或任何與本網站連結的第三方網站造成的任何損失， 均不負任何責任。</li>
+          <li>若您對於我們的隱私政策方面有任何疑問，請聯繫我們。</li>
+        </ul>
+      </div>
+      <div class="bg"></div>
+    </div>
+    <div class="loadingPage" style="display:none">
+      <div class="loading">
+        <div class="loading__circle"></div>
+        <div class="loading__circle"></div>
+        <div class="loading__circle"></div>
+        <div class="loading__circle"></div>
+        <div class="loading__circle"></div>
+        <div class="loading__circle"></div>
+        <div class="loading__circle"></div>
+        <div class="loading__circle"></div>
+      </div>
+    </div>
+    <div class="trans_bg">
+      <div class="trans_ipad">
+        <div class="trans_center"><img src="img/ipad_ok.png">                
+          <p>請將裝置轉至橫式<br>體驗最佳瀏覽方式</p>
+        </div>
+      </div>
+      <div class="trans_iphone">
+        <div class="trans_center"><img src="img/iphone_ok.png">                
+          <p>請將裝置轉至直式<br>體驗最佳瀏覽方式</p>
+        </div>
+      </div>
+    </div>
+    <!-- header-->
+    <!-- add ".scrolled" when scrolling-->
+    <header>
+      <div class="inner">
+        <div class="logoBox"><a class="logo" href="index.html"> <img src="asset/svg/logo-w.svg" alt="logo"></a><a class="life-logo" href="#"><img src="asset/svg/life-logo-w.svg" alt="life-logo"></a></div>
+        <!-- bur-->
+        <div class="bur_box_index">
+          <div class="bur" tabindex="1">
+            <div class="burger-brick"></div>                
+            <div class="burger-brick middle"></div>                
+            <div class="burger-brick"></div>
+          </div>
+        </div>
+        <script src="js/vendor/bur.js"></script>
+        <!-- PC menu -->
+        <nav>
+          <ul>
+            <li>
+              <!-- add ".active"--><a href="#about">關於無翅聯盟</a>
+            </li>
+            <li><a href="#join">加入聯盟</a></li>
+            <li><a href="#celebrity">聯盟英雄榜</a></li>
+            <li><a href="#"> <span class="icon-video"></span>護鯊短片</a></li>
+            <li><a href="#index"><span class="icon-home"></span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- M Menu-->
+    <div class="menuBox" style="display:none">
+      <ul>
+        <li><a class="active" href="#">關於無翅聯盟</a></li>
+        <li><a href="#">加入聯盟</a></li>
+        <li><a href="#">聯盟英雄榜</a></li>
+        <li><a href="#"> <span class="icon-video"></span>護鯊短片</a></li>
+        <li><a href="#"><span class="icon-home"></span></a></li>
+      </ul>
+    </div>
+    <!-- lightbox-->
+    <div class="popup" style="display:none">
+      <div class="content">
+        <div class="inner">
+          <p>請填寫統一編號</p><a class="btn-blue" href="#"><span class="main">確定</span></a>
+        </div>
+      </div>
+    </div>
+    <!-- content-->
+    <div class="wrap">
+      <div class="openingLogo" style="display:none">
+        <div class="inner">
+          <div class="partner"><img src="asset/svg/fin-w-comp.svg" alt=""/>
+          </div>
+          <div class="cover"></div>
+        </div>
+      </div>
+      <!-- add "dark"-->
+      <div class="fixed-element">
+        <div class="scroll"><span>scroll</span>
+          <div class="arrowBox-scroll"><span class="arrow arrow-first"></span><span class="arrow arrow-second"></span></div>
+        </div>
+        <div class="page">
+          <ul>
+            <li>1</li>
+            <li class="midLine"> </li>
+            <li>5</li>
+          </ul>
+        </div>
+        <div class="social">
+          <ul>
+            <li><a href="#"><span class="icon-fb"></span></a></li>
+            <li><a class="btn-yt" href="#"><span class="icon-yt"></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- index--><a class="anchor" name="index"></a>
+      <section class="index">
+        <div class="inner">
+          <div class="main">
+            <div class="ttBox">
+              <div class="tt"><img src="asset/svg/tt.svg" alt=""/>
+              </div>
+            </div>
+            <h2>讓魚翅步入歷史</h2>
+            <p>你也許沒有感覺，但你的行為正讓鯊魚成為歷史，<span class="break">為了生態永續，為了環境保育，加入無翅聯盟，</span><span class="break">該步入歷史的是餐桌上的魚翅，而不是鯊魚。</span></p><a class="btn" href="#">立即加入<span class="icon-arrow"></span><span class="underLine"></span></a>
+          </div>
+          <div class="cover"></div>
+        </div>
+      </section>
+      <!-- intro--><a class="anchor" name="about"></a>
+      <section class="intro">
+        <canvas class="wave-xp"></canvas><script src="js/vendor/wave.js"></script>
+        <div class="main">
+          <div class="picBox">
+            <div class="picOuter">
+              <div class="pic1"><img src="img/intro1.png" alt=""/>
+                <div class="cube"></div>
+              </div>
+              <div class="pic2">
+                <div class="inner"><img src="img/intro2.png" alt=""/>
+                  <div class="cube"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="txt">
+            <h2>關於無翅聯盟</h2>
+            <h3>Fin Free United</h3>
+            <p>如果你知道你碗裡的魚翅，會對自然生態帶來多殘忍和慘痛的代價，我想你絕對吃不下去。</p>
+            <p>正因為魚翅的經濟價值高，因此漁業者為了節省船艙空間帶回更多魚翅，他們會血淋淋地割下鯊魚身上2%有用的魚鰭，並將98%的魚身丟回海裡，這比直接殺死鯊魚更加殘忍，因為少了魚鰭的鯊魚無法移動和呼吸，他們將以非常痛苦的方式溺死在海中。</p>
+            <p>據統計，全球鯊魚總量在30年來減少了90%，已被國際自然保育聯盟列入「第二類保育野生動物」，諷刺的是，只是個小島的台灣，居然是全球第四大捕鯊的國家，這樣你還會覺得，就算台灣不吃魚翅也改變不了什麼嗎？</p>
+            <p>你當然可以做出改變，不僅僅是個人不吃魚翅，而是對整個環境造成巨大影響的改變，「無翅聯盟」希望透過企業的力量，徹底抹去吃魚翅這種過時的飲食文化，但我們需要你的加入，需要你的公司、企業加入，一起讓台灣成為更文明、對海洋負責任的島嶼。</p>
+          </div>
+        </div>
+      </section>
+      <!-- join--><a class="anchor" name="join"></a>
+      <section class="join">
+        <div class="skew"></div>
+        <div class="arrowBox"><a class="left" href="#"><span class="icon-arrow"></span></a><a class="right" href="#"><span class="icon-arrow"></span></a></div>
+        <div class="main">
+          <h2>加入聯盟</h2>
+          <h3>Join Us</h3>
+          <!-- s1-->
+          <div class="content">
+            <div class="cirBox">
+              <div class="form">
+                <ul>
+                  <li><span class="tri"></span>
+                    <select>
+                      <option value="0">請選擇企業類別</option>
+                      <option value="1">廣告</option>
+                      <option value="2">非營利</option>
+                    </select>
+                  </li>
+                  <li><a class="del_pos" href="#"></a>
+                    <input type="text" placeholder="請填寫企業名稱">
+                  </li>
+                  <li><a class="del_pos" href="#"></a>
+                    <input type="text" maxlength="5" placeholder="請填寫 5 字內企業簡稱">
+                  </li>
+                  <li><a class="del_pos" href="#"></a>
+                    <input type="number" placeholder="請填寫統一編號">
+                  </li>
+                  <li>
+                    <textarea type="text" maxlength="16" placeholder="發表 16 字以內無翅宣言"></textarea>
+                  </li>
+                </ul>
+              </div><a class="btn-blue" href="#"><span class="main">上傳企業 LOGO <span class="icon-upload"></span></span></a>
+              <p class="ps">※ 請上傳 2M 以下的 PNG 檔案</p>
+              <div class="cirBor"></div>
+            </div>
+          </div>
+          <!-- s2-->
+          <div class="content" style="display:none">
+            <div class="main s2-main">
+              <div class="edit">
+                <div class="finBox">
+                  <div class="comp-logo"><img src="img/imei.png" alt=""/>
+                  </div>
+                  <div class="img"><img src="asset/svg/fin-gn.svg" alt=""/>
+                  </div><span class="company">義美食品品</span>
+                </div>
+                <div class="scale"><a class="minus" href="#"><span></span></a>
+                  <div class="slider"><span class="cir"></span></div><a class="plus" href="#"><span></span></a>
+                </div>
+              </div>
+              <div class="btnBox"><a class="btn-blue" href="#"> <span class="main">重新上傳LOGO</span></a><a class="btn-blue" href="#"> <span class="main">預覽</span></a></div>
+            </div>
+          </div>
+          <!--s3-->
+          <div class="content" style="display:none">
+            <div class="main s3-main">
+              <div class="preview">
+                <div class="stateBox">
+                  <div class="statement">
+                    <div class="inner"><span class="icon-qt-top"></span><span class="icon-qt-bt"></span>
+                      <p class="state">魚翅跟毒品一樣，是不能碰的。</p>
+                    </div>
+                    <p class="comp-name"><span>義美食品 / 企業</span></p>
+                  </div>
+                  <div class="stateBor">
+                    <div class="inner"><span></span></div>
+                  </div>
+                </div>
+                <div class="finBox">
+                  <div class="img"><img src="asset/svg/fin-gn.svg" alt=""/>
+                  </div>
+                </div>
+              </div><a class="btn-blue" href="#"> <span class="main">送出連署</span></a>
+            </div>
+          </div>
+          <!--s4-->
+          <div class="content" style="display:none">
+            <div class="main s4-main">
+              <div class="cirBox">
+                <div class="cirBor"></div>
+                <div class="fin-img"><img src="asset/svg/fin-gn.svg" alt=""/>
+                </div>
+                <h3>連署完成！</h3>
+                <p>Logo 經審核後即可露出<span class="break">謝謝您對海洋生態的幫助！</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- celebrity--><a class="anchor" name="celebrity"></a>
+      <section class="celebrity">
+        <div class="arrowBox"><a class="left" href="#"><span class="icon-arrow"></span></a><a class="right" href="#"><span class="icon-arrow"></span></a></div>
+        <div class="main">
+          <div class="left">
+            <div class="content">
+              <div class="celeBox">
+                <div class="fin"><img src="img/fin-jay.png" alt=""/>
+                </div>
+                <div class="pic"></div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="cele-state">
+              <div class="stateBox">
+                <div class="statement">
+                  <div class="inner"><span class="icon-qt-top"></span><span class="icon-qt-bt"></span>
+                    <p class="state">魚翅跟毒品一樣是不能碰的</p>
+                  </div>
+                  <p class="comp-name"><span>周杰倫</span></p>
+                </div>
+              </div>
+              <div class="pattern-cover"></div>
+            </div>
+          </div>
+        </div>
+        <!--slider-->
+        <div class="sliderBox">
+          <ul>
+            <li><a class="active"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+      </section>
+      <!--company-->
+      <section class="company-logo hover_none">
+        <div class="bubbleBox"></div>
+        <div class="main">
+          <h2>連署企業</h2>
+          <h3>Petition Partners</h3>
+          <div class="category">
+            <ul>
+              <li><a class="active">全部</a></li>
+              <li><a href="#">品牌</a></li>
+              <li><a href="#">廣告</a></li>
+              <li><a href="#">非營利</a></li>
+            </ul>
+          </div>
+          <div class="category-m">
+            <select>
+              <option value="0">全部</option>
+              <option value="1">廣告</option>
+              <option value="2">非營利</option>
+            </select>
+          </div>
+          <div class="content">
+            <ul>
+              <li class="item">
+                <div class="fin"><img src="img/c1.png" alt=""/>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <div class="statement">
+                      <div class="inner"><span class="icon-qt-top"></span><span class="icon-qt-bt"></span>
+                        <p class="state">魚翅跟毒品一樣是不能碰的</p>
+                      </div>
+                      <p class="comp-name"><span>周杰倫</span></p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="fin"><img src="img/c2.png" alt=""/>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <div class="statement">
+                      <div class="inner"><span class="icon-qt-top"></span><span class="icon-qt-bt"></span>
+                        <p class="state">魚翅跟毒品一樣，是不能碰的。</p>
+                      </div>
+                      <p class="comp-name"><span>周杰倫</span></p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="fin"><img src="img/c7.png" alt=""/>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <div class="statement">
+                      <div class="inner"><span class="icon-qt-top"></span><span class="icon-qt-bt"></span>
+                        <p class="state">魚翅跟毒品一樣，是不能碰的。</p>
+                      </div>
+                      <p class="comp-name"><span>周杰倫</span></p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="fin"><img src="img/c3.png" alt=""/>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <div class="statement">
+                      <div class="inner"><span class="icon-qt-top"></span><span class="icon-qt-bt"></span>
+                        <p class="state">魚翅跟毒品一樣，是不能碰的。</p>
+                      </div>
+                      <p class="comp-name"><span>周杰倫</span></p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="fin"><img src="img/c4.png" alt=""/>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <div class="statement">
+                      <div class="inner"><span class="icon-qt-top"></span><span class="icon-qt-bt"></span>
+                        <p class="state">魚翅跟毒品一樣，是不能碰的。</p>
+                      </div>
+                      <p class="comp-name"><span>周杰倫</span></p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="fin"><img src="img/c5.png" alt=""/>
+                </div>
+                <div class="hover">
+                  <div class="inner">
+                    <div class="statement">
+                      <div class="inner"><span class="icon-qt-top"></span><span class="icon-qt-bt"></span>
+                        <p class="state">魚翅跟毒品一樣，是不能碰的。</p>
+                      </div>
+                      <p class="comp-name"><span>周杰倫</span></p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- laoding-->
+            <div class="loadingBox">
+              <div class="loading">
+                <div class="loading__circle"></div>
+                <div class="loading__circle"></div>
+                <div class="loading__circle"></div>
+                <div class="loading__circle"></div>
+                <div class="loading__circle"></div>
+                <div class="loading__circle"></div>
+                <div class="loading__circle"></div>
+                <div class="loading__circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--footer-->
+        <footer>
+          <div class="footer-social">
+            <ul>
+              <li><a href="#"><span class="icon-fb"></span></a></li>
+              <li><a href="#"><span class="icon-yt"></span></a></li>
+            </ul>
+          </div>
+          <div class="copy">
+            <ul>
+              <li><a href="#">聯繫我們</a></li>
+              <li><a href="#">隱私權政策</a></li>
+              <li>Copyright © 2018 WildAid Limited.</li>
+            </ul>
+          </div>
+        </footer>
+        <div class="pattern-cover"></div><script  src="js/vendor/bubble.js"></script>
+      </section>
+    </div>
+  </body>
+</html>

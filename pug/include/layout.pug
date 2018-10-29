@@ -1,0 +1,79 @@
+doctype html
+html
+    head
+        include head
+    body
+        include privacy
+        .loadingPage(style="display:none")
+            include loading
+        block trans
+            include trans
+        // header
+        // add ".scrolled" when scrolling
+        header
+            .inner
+                .logoBox
+                    a.logo(href="index.html") 
+                        img(src="asset/svg/logo-w.svg", alt="logo")
+                    a.life-logo(href="#")
+                        img(src="asset/svg/life-logo-w.svg", alt="life-logo")
+                // bur
+                block bur
+                    include bur
+                
+                // PC menu 
+                block menu
+                    nav
+                        ul
+                            li
+                                // add ".active"
+                                a(href="#about") 關於無翅聯盟
+                            li
+                                a(href="#join") 加入聯盟
+                            li
+                                a(href="#celebrity") 聯盟英雄榜
+                            li
+                                a(href="#") 
+                                    span.icon-video
+                                    | 護鯊短片
+                            li
+                                a(href="#index")
+                                    span.icon-home
+        // M Menu
+        include menubox
+        // lightbox
+        block lightbox
+            .popup(style="display:none")
+                .content
+                    .inner
+                        p 請填寫統一編號
+                        a.btn-blue(href="#")
+                            span.main 確定
+        // content
+        .wrap
+            .openingLogo(style="display:none")
+                .inner
+                    .partner
+                        +svg('fin-w-comp')
+                    .cover
+            // add "dark"
+            .fixed-element
+                .scroll
+                    span scroll
+                    .arrowBox-scroll
+                        span.arrow.arrow-first
+                        span.arrow.arrow-second
+                .page
+                    ul
+                        li 1
+                        li.midLine 
+                        li 5
+                .social
+                    ul
+                        li
+                            a(href="#")
+                                span.icon-fb
+                        li
+                            a.btn-yt(href="#")
+                                span.icon-yt
+            block content

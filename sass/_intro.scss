@@ -1,0 +1,190 @@
+canvas {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -140px;
+    z-index: -2;
+    pointer-events: none;
+    @media screen and (max-width: 767px) {
+        width: 140%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.intro {
+    background: #8fcde1;
+    z-index: 1;
+    height: 80vh;
+    @media screen and (max-width: 1024px) {
+        height: 65vh;
+    }
+    @media screen and (max-height: 750px) {
+        height: 83vh;
+    }
+    @media screen and (max-device-width: 1024px) {
+        height: 75vh;
+    }
+    @media screen and (max-width: 767px) {
+        height: auto;
+    }
+    &:before {
+        content: "";
+        width: 100%;
+        height: 30px;
+        background: rgba(144, 205, 225, 0);
+        background: -moz-linear-gradient(top, rgba(144, 205, 225, 0) 0%, rgba(143, 204, 225, 1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(144, 205, 225, 0)), color-stop(100%, rgba(143, 204, 225, 1)));
+        background: -webkit-linear-gradient(top, rgba(144, 205, 225, 0) 0%, rgba(143, 204, 225, 1) 100%);
+        background: -o-linear-gradient(top, rgba(144, 205, 225, 0) 0%, rgba(143, 204, 225, 1) 100%);
+        background: -ms-linear-gradient(top, rgba(144, 205, 225, 0) 0%, rgba(143, 204, 225, 1) 100%);
+        background: linear-gradient(to bottom, rgba(144, 205, 225, 0) 0%, rgba(143, 204, 225, 1) 100%);
+        top: -30px;
+        left: 0;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        @media screen and (max-width: 767px) {
+            height: 26px;
+            top: -26px;
+        }
+    }
+    .main {
+        display: flex; // align-items: center;
+        width: 80%;
+        max-width: 1380px;
+        position: relative;
+        z-index: 1;
+        @media screen and (min-width: 768px) {
+            @include pos-mid;
+            top: 53%;
+        }
+        @media screen and (max-width: 1024px) {
+            width: 82%;
+            top: 57%;
+        }
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            margin: auto;
+        }
+    }
+}
+
+.picBox,
+.txt {
+    width: 50%;
+}
+
+.picBox {
+    @media screen and (max-width: 1440px) {
+        width: 39%;
+        margin-top: 3%;
+        margin-right: 6%;
+    }
+    @media screen and (max-width: 1024px) {
+        width: 34%;
+        margin-top: 10%;
+    }
+    @media screen and (max-width: 767px) {
+        margin-top: 20%;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+.picOuter {
+    width: 100%;
+    position: relative;
+    max-width: 565px;
+    @media screen and (min-width: 768px) {
+        margin: auto;
+    }
+    @media screen and (max-width: 767px) {
+        width: 70%;
+        float: right;
+        @include clear;
+    }
+}
+
+.pic1,
+.pic2 {
+    position: relative;
+}
+
+.pic1 {
+    .cube {
+        left: 31px;
+        top: -10px;
+        width: 74%;
+        @media screen and (max-width: 1440px) {
+            left: 24px;
+        }
+        @media screen and (max-width: 767px) {
+            left: 19px;
+        }
+    }
+}
+
+.pic2 {
+    width: 250px;
+    position: absolute;
+    bottom: -145px;
+    @media screen and (min-width: 1441px) {
+        right: 45px;
+    }
+    @media screen and (max-width: 1440px) {
+        width: 200px;
+        right: -15px;
+    }
+    @media screen and (max-width: 1024px) {
+        width: 180px;
+        right: -15px;
+    }
+    @media screen and (max-width: 767px) {
+        width: 55%;
+        left: -35%;
+        bottom: -65px;
+    }
+    .inner {
+        position: relative;
+        z-index: 1;
+    }
+    .cube {
+        left: -10px;
+        bottom: -10px;
+        width: 100%;
+    }
+}
+
+.cube {
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border: 1px solid white;
+}
+
+.txt {
+    padding: 0 2%;
+    @media screen and (max-width: 1440px) {
+        width: 56%;
+    }
+    @media screen and (max-width: 1024px) {
+        width: 60%;
+        font-size: 1.5rem;
+    }
+    @media screen and (max-width: 767px) {
+        margin-top: 115px;
+        width: 100%;
+    }
+    @media screen and (max-device-width: 767px) {
+        margin-top: 35%;
+    }
+}
+
+p {
+    text-align: left;
+    margin: 15px 0;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+    @extend %txt_justify;
+}

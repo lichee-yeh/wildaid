@@ -1,0 +1,302 @@
+extends ./include/layout
+include ./include/mixin
+block content
+	// index
+	a(name="index").anchor
+	section.index
+		.inner
+			.main
+				.ttBox
+					.tt
+						+svg('tt')
+				h2 讓魚翅步入歷史
+				p 你也許沒有感覺，但你的行為正讓鯊魚成為歷史，
+					span.break 為了生態永續，為了環境保育，加入無翅聯盟，
+					span.break 該步入歷史的是餐桌上的魚翅，而不是鯊魚。
+				a.btn(href="#") 立即加入
+					span.icon-arrow
+					span.underLine
+			.cover
+	// intro
+	a(name="about").anchor
+	section.intro
+		canvas.wave-xp
+		<script src="js/vendor/wave.js"></script>
+		.main
+			.picBox
+				.picOuter
+					.pic1
+						+png('intro1')
+						.cube
+					.pic2
+						.inner
+							+png('intro2')
+							.cube
+			.txt
+				h2 關於無翅聯盟
+				h3 Fin Free United
+				p 如果你知道你碗裡的魚翅，會對自然生態帶來多殘忍和慘痛的代價，我想你絕對吃不下去。
+				p 正因為魚翅的經濟價值高，因此漁業者為了節省船艙空間帶回更多魚翅，他們會血淋淋地割下鯊魚身上2%有用的魚鰭，並將98%的魚身丟回海裡，這比直接殺死鯊魚更加殘忍，因為少了魚鰭的鯊魚無法移動和呼吸，他們將以非常痛苦的方式溺死在海中。
+				p 據統計，全球鯊魚總量在30年來減少了90%，已被國際自然保育聯盟列入「第二類保育野生動物」，諷刺的是，只是個小島的台灣，居然是全球第四大捕鯊的國家，這樣你還會覺得，就算台灣不吃魚翅也改變不了什麼嗎？
+				p 你當然可以做出改變，不僅僅是個人不吃魚翅，而是對整個環境造成巨大影響的改變，「無翅聯盟」希望透過企業的力量，徹底抹去吃魚翅這種過時的飲食文化，但我們需要你的加入，需要你的公司、企業加入，一起讓台灣成為更文明、對海洋負責任的島嶼。
+	// join
+	a(name="join").anchor
+	section.join
+		.skew
+		.arrowBox
+			a.left(href="#")
+				span.icon-arrow
+			a.right(href="#")
+				span.icon-arrow
+		.main
+			h2 加入聯盟
+			h3 Join Us
+			// s1
+			.content
+				.cirBox
+					.form
+						ul
+							li
+								span.tri
+								select
+									option(value='0') 請選擇企業類別
+									option(value='1') 廣告
+									option(value='2') 非營利
+							li
+								a.del_pos(href="#")
+									//- span.icon-del
+								input(type='text', placeholder='請填寫企業名稱')
+							li
+								a.del_pos(href="#")
+									//- span.icon-del
+								input(type='text', maxlength='5', placeholder='請填寫 5 字內企業簡稱')
+							li
+								a.del_pos(href="#")
+									//- span.icon-del
+								input(type='number',placeholder='請填寫統一編號')
+							li
+								textarea(type="text", maxlength='16',  placeholder="發表 16 字以內無翅宣言")
+					a.btn-blue(href="#")
+						span.main 上傳企業 LOGO 
+							span.icon-upload
+					p.ps ※ 請上傳 2M 以下的 PNG 檔案
+					.cirBor
+			// s2
+			.content(style="display:none")
+				.main.s2-main
+					.edit
+						.finBox
+							.comp-logo
+								+png('imei')
+							.img
+								+svg('fin-gn')
+							span.company 義美食品品
+						.scale
+							a.minus(href="#")
+								span
+							.slider
+								span.cir
+							a.plus(href="#")
+								span
+					.btnBox
+						a.btn-blue(href="#") 
+							span.main 重新上傳LOGO
+						a.btn-blue(href="#") 
+							span.main 預覽
+			//s3
+			.content(style="display:none")
+				.main.s3-main
+					.preview
+						.stateBox
+							.statement
+								.inner
+									span.icon-qt-top
+									span.icon-qt-bt
+									p.state 魚翅跟毒品一樣，是不能碰的。
+								p.comp-name
+									span 義美食品 / 企業
+							.stateBor
+								.inner
+									span
+						.finBox
+							.img
+								+svg('fin-gn')
+					a.btn-blue(href="#") 
+						span.main 送出連署
+			//s4
+			.content(style="display:none")
+				.main.s4-main
+					.cirBox
+						.cirBor
+						.fin-img
+							+svg('fin-gn')
+						h3 連署完成！
+						p Logo 經審核後即可露出
+							span.break 謝謝您對海洋生態的幫助！
+	// celebrity
+	a(name="celebrity").anchor
+	section.celebrity
+		.arrowBox
+			a.left(href="#")
+				span.icon-arrow
+			a.right(href="#")
+				span.icon-arrow
+		.main
+			.left
+				.content
+					.celeBox
+						.fin
+							+png('fin-jay')
+						.pic
+			.right
+				.cele-state
+					.stateBox
+							.statement
+								.inner
+									span.icon-qt-top
+									span.icon-qt-bt
+									p.state 魚翅跟毒品一樣是不能碰的
+								p.comp-name
+									span 周杰倫
+					.pattern-cover
+		//slider
+		.sliderBox
+			ul
+				li
+					a.active
+				li
+					a(href="#")
+				li
+					a(href="#")
+				li
+					a(href="#")
+				li
+					a(href="#")
+				li
+					a(href="#")
+				li
+					a(href="#")
+				li
+					a(href="#")
+				li
+					a(href="#")
+	//company
+	section.company-logo.hover_none
+		.bubbleBox
+		.main
+			h2 連署企業
+			h3 Petition Partners
+			.category
+				ul
+					li
+						a.active 全部
+					li
+						a(href="#") 品牌
+					li
+						a(href="#") 廣告
+					li
+						a(href="#") 非營利
+			.category-m
+				select
+					option(value='0') 全部
+					option(value='1') 廣告
+					option(value='2') 非營利
+			.content
+				ul
+					li.item
+							.fin
+								+png('c1')
+							.hover
+								.inner
+									.statement
+										.inner
+											span.icon-qt-top
+											span.icon-qt-bt
+											p.state 魚翅跟毒品一樣是不能碰的
+										p.comp-name
+											span 周杰倫
+					li.item
+						.fin
+							+png('c2')
+						.hover
+							.inner
+								.statement
+									.inner
+										span.icon-qt-top
+										span.icon-qt-bt
+										p.state 魚翅跟毒品一樣，是不能碰的。
+									p.comp-name
+										span 周杰倫
+					li.item
+						.fin
+							+png('c7')
+						.hover
+							.inner
+								.statement
+									.inner
+										span.icon-qt-top
+										span.icon-qt-bt
+										p.state 魚翅跟毒品一樣，是不能碰的。
+									p.comp-name
+										span 周杰倫
+					li.item
+						.fin
+							+png('c3')
+						.hover
+							.inner
+								.statement
+									.inner
+										span.icon-qt-top
+										span.icon-qt-bt
+										p.state 魚翅跟毒品一樣，是不能碰的。
+									p.comp-name
+										span 周杰倫
+					li.item
+						.fin
+							+png('c4')
+						.hover
+							.inner
+								.statement
+									.inner
+										span.icon-qt-top
+										span.icon-qt-bt
+										p.state 魚翅跟毒品一樣，是不能碰的。
+									p.comp-name
+										span 周杰倫
+					li.item
+						.fin
+							+png('c5')
+						.hover
+							.inner
+								.statement
+									.inner
+										span.icon-qt-top
+										span.icon-qt-bt
+										p.state 魚翅跟毒品一樣，是不能碰的。
+									p.comp-name
+										span 周杰倫
+
+				// laoding
+				.loadingBox
+					include include/loading.pug
+		//footer
+		footer
+			.footer-social
+				ul
+					li
+						a(href="#")
+							span.icon-fb
+					li
+						a(href="#")
+							span.icon-yt
+			.copy
+				ul
+					li
+						a(href="#") 聯繫我們
+					li
+						a(href="#") 隱私權政策
+					li Copyright © 2018 WildAid Limited.
+		.pattern-cover
+		<script  src="js/vendor/bubble.js"></script>
+
+
